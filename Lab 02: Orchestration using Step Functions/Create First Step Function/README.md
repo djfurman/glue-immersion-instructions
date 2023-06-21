@@ -1,6 +1,6 @@
 # Create First Step Function
 
-::alert[Please complete the prerequisite [How to start?](/howtostart/awseevnt/s3-and-local-file.html) and [Lab1](/lab1.html) sections before starting this lab.]
+::alert[Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) and [Lab 01: Creating your First Glue Job](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job/README.md) sections before starting this lab.]
 
 
 In this section of the lab, we will show you how to use the graphic user interface in Step Function to build a workflow to manage the execution of multiple Glue jobs and Glue crawlers. 

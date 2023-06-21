@@ -114,4 +114,4 @@ Now that we have the source code file for the Glue job, follow the instructions 
 
 We have now successfully created and run our first Glue job. The job reads data from a CSV file containing NYC taxi data stored in s3 and loads it to a different path in s3.
 
-You may now proceed to [Lab 02](/Lab%2002%3A%20Orchestration%20using%20Step%20Functions/README.md) of this workshop
+You may now proceed to [Lab 02: Orchestration using Step Functions](/Lab%2002%3A%20Orchestration%20using%20Step%20Functions/README.md) of this workshop

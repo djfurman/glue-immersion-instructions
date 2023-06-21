@@ -72,4 +72,4 @@ aws cloudformation deploy --template-file  ~/environment/gluemwaatemplate.yaml -
 
 
 
-You are finished setting up the workshop environment and can move on to [Lab 01](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job/README.md) now.
+You are finished setting up the workshop environment and can move on to [Lab 01: Creating your First Glue Job](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job/README.md) now.
