@@ -22,10 +22,12 @@ We will use [AWS Cloud9](https://aws.amazon.com/cloud9/) to run shell commands, 
 cd ~/environment/
 
 echo "==================> DOWNLOADING & EXECUTING THE ONE-STEP-SETUP SCRIPT <====================
-$(curl -s ':assetUrl{path="/download/howtostart/awseevnt/s3-and-local-file/one-step-setup.sh"}' --output ~/environment/glue-workshop/library/one-step-setup.sh --create-dirs)
+$(curl -s 'https://static.us-east-1.prod.workshops.aws/51892261-738f-43d3-85b8-cac1355bb467/static/download/howtostart/awseevnt/s3-and-local-file/one-step-setup.sh?Key-Pair-Id=K36Q2WVO3JP7QD&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9zdGF0aWMudXMtZWFzdC0xLnByb2Qud29ya3Nob3BzLmF3cy81MTg5MjI2MS03MzhmLTQzZDMtODViOC1jYWMxMzU1YmI0NjcvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4Nzk2ODQxN319fV19&Signature=CodBQ5BVX~2RMe28fQHZSAyjygRRylVTnbAYYGGUjUOR93UTGEdFX7IvpGq8YvMcIne5ot06PI~UwH6QqUAMJYRFTW3XOEuS58FSlAQz522el1CCxJAwPPJOBcwj7YdOJRfW7ytGZ7pnwciLoHb7nvWLkDPRgqsfNrc~OvbLKShm~SnByxL3B88cfeL4rhMdtYIvCvhUSYuigeOKGZh6h-3O8vm4GadmTP9rMcZQtOnye4iDjl2PAUs5cIMpkMzPac9TWTjGsSKyK5qYhigpVPXPm-IAXzzRvhjub7q6PfGwZe7dy-Ngnn1zKLSisHcUd41KSE-OjcyWdegA671oow__' --output ~/environment/glue-workshop/library/one-step-setup.sh --create-dirs)
 ==========================================================================================="
 
 . ./glue-workshop/library/one-step-setup.sh  'https://static.us-east-1.prod.workshops.aws/public/f7d69c1d-5f04-4b2c-bd7a-e77e4892bbb6/static/0/'
+
+
 
 ~~~
 
