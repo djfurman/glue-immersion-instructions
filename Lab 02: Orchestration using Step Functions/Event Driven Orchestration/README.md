@@ -9,6 +9,19 @@ In this section, we demonstrate how an S3 event generated when new files are upl
 > **NOTE**
 > If you want to start a workflow with Amazon S3 data events, you must ensure that events for the S3 bucket of interest are logged to AWS CloudTrail and EventBridge. A new CloudTrail for S3 events is created as part of workshop environment. If you want to use the same S3 event pattern in your own environment, you must create a CloudTrail trail. For more information, see [Creating a trail for your AWS account](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html).
 
+> **Warning**
+> Run the following command to update the cloudtrail trail to forward the s3 event to EventBridge
+
+``` bash
+$(curl -s https://raw.githubusercontent.com/MazenAB/Glue-immersion-day-MWAA/main/FurtherRequiredInlinePolicy.json --output ~/environment/FurtherRequiredInlinePolicy.json --create-dirs)
+
+/bin/sed -i "s/AWS_ACCOUNT_ID/${AWS_ACCOUNT_ID//./_}/g" FurtherRequiredInlinePolicy.json
+
+aws iam  put-role-policy --role-name AWSEC2ServiceRole-etl-ttt-demo --policy-name FurtherRequiredInlinePolicy --policy-document file://~/environment/FurtherRequiredInlinePolicy.json
+
+aws cloudtrail put-event-selectors --trail-name glueworkshop-trail --event-selectors '[{"ReadWriteType": "WriteOnly","IncludeManagementEvents": false,"DataResources": [{"Type":"AWS::S3::Object","Values": ["arn:aws:s3:::'"$BUCKET_NAME"'/input/lab2/eventdriven/"]}]}]'
+```
+
 **Event driven Orchestration**
 
 1. We will create a new rule with name `glueworkshop-rule` in Amazon EventBridge that specifies Amazon **S3** as the event source, **PutObject** as the event name, and the lab bucket name as a request parameter with prefix pointing to the folder we want to monitor which is `s3://${BUCKET_NAME}/input/lab2/eventdriven/`. Whenever a new object is put in the S3 bucket folder, the rule will trigger its targets, where in our case, the Step Functions state machine. Run the following command in Cloud9 terminal.
