@@ -16,7 +16,9 @@ We will use [AWS Cloud9](https://aws.amazon.com/cloud9/) to run shell commands, 
 
 **3.** Copy below commands (*always use the tiny **copy icon** on the top-right-corner of the code block!!!*) and paste it in your **Cloud9 Command Line Terminal**:
 
-::alert[**Note:** The below commands will automatically download and execute a script called **one-step-setup.sh**. The script name speaks for itself, by run it, all the required pre-steps will be automatically configured for this workshop.]
+>**Note:** 
+>The below commands will automatically download and execute a script called **one-step-setup.sh**. The script name speaks for itself, by run it, all the required pre-steps will be automatically configured for this workshop.
+
 
 ~~~shell
 cd ~/environment/
@@ -29,8 +31,8 @@ $(curl -s ':assetUrl{path="/download/howtostart/awseevnt/s3-and-local-file/one-s
 
 ~~~
 
-:::alert{header="Note!" type="success"}
-We can verify that our environmental variables have been successfully configured by running the following commands :::
+> **Warning** 
+> We can verify that our environmental variables have been successfully configured by running the following commands :::
 
 ```bash
 echo ${BUCKET_NAME}
