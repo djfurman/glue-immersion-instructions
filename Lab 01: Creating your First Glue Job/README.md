@@ -1,6 +1,7 @@
 # Lab 01: Creating your First Glue Job
 
-::alert[Please complete the prerequisite in [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) section before start this lab.]
+> **Alert**
+> Please complete the prerequisite in [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) section before start this lab.
 
 In this lab, we will configure AWS Glue job to read data from our NYC taxi dataset and write it back to s3 in a partitioned way. AWS Glue job will be configured to receive 4 job parameters.
 

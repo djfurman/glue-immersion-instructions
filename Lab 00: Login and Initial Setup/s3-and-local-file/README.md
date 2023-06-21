@@ -31,7 +31,7 @@ $(curl -s ':assetUrl{path="/download/howtostart/awseevnt/s3-and-local-file/one-s
 
 ~~~
 
-> **Warning** 
+> **Note** 
 > We can verify that our environmental variables have been successfully configured by running the following commands :::
 
 ```bash
