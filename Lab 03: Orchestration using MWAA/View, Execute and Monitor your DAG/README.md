@@ -1,7 +1,7 @@
 # View, Execute and Monitor your DAG
 
 
-> **Alert**
+> **Note**
 > Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) and [Lab 01: Creating your First Glue Job](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job/README.md) section before starting this lab.
 
 # Adding your first DAG in your MWAA Environment

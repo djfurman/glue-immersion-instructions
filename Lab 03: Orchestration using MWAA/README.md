@@ -1,6 +1,6 @@
 # Lab 03: Orchestration using MWAA
 
-> **Alert**
+> **Note**
 > Please complete [How to start?](/howtostart/awseevnt/s3-and-local-file.html) and [Lab 1](/lab1.html) sections before starting this lab.
 
 ## Apache Airflow Basics

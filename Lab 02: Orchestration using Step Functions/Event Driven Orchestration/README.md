@@ -6,7 +6,7 @@
 
 In this section, we demonstrate how an S3 event generated when new files are uploaded to a specific S3 location can trigger execution of workflow. 
 
-> **Alert**
+> **NOTE**
 > If you want to start a workflow with Amazon S3 data events, you must ensure that events for the S3 bucket of interest are logged to AWS CloudTrail and EventBridge. A new CloudTrail for S3 events is created as part of workshop environment. If you want to use the same S3 event pattern in your own environment, you must create a CloudTrail trail. For more information, see [Creating a trail for your AWS account](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html).
 
 **Event driven Orchestration**
@@ -29,7 +29,6 @@ aws events put-rule \
                         } \
                     }"
 ```
-
 
 2. Next, we will add the Step Function state machine created earlier as the target to the EventBridge rule `glueworkshop-rule`. Run the following command in Cloud9 terminal.
 

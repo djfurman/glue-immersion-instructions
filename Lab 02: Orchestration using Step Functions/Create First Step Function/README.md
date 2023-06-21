@@ -1,6 +1,6 @@
 # Create First Step Function
 
-> **alert**
+> **Note**
 > Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) and [Lab 01: Creating your First Glue Job](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job/README.md) sections before starting this lab.
 
 In this section of the lab, we will show you how to use the graphic user interface in Step Function to build a workflow to manage the execution of multiple Glue jobs and Glue crawlers.
@@ -34,9 +34,8 @@ You are looking to use AWS Step functions when you are looking to build orchestr
                 }
             }
         ```
-        :::alert{header="Important" type="warning"}
-Check the box for the **Wait for task to complete - optional** . Without this checked, the state machine will not wait on a response back from the glue job
-:::
+> **Warning**
+> Check the box for the **Wait for task to complete - optional** . Without this checked, the state machine will not wait on a response back from the glue job
 
 ![Glue job state](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-1-3.png)
 
@@ -52,9 +51,8 @@ Check the box for the **Wait for task to complete - optional** . Without this ch
 
 8. Select `Start execution` and paste the following JSON parameter set as the State Machine's input
 
-:::alert{header="Important" type="warning"}
-Change **REPLACE_ACCOUNT_NUMBER** to your corresponding account number of the **BUCKET_NAME** parameter!
-:::
+> **Warning**
+> Change **REPLACE_ACCOUNT_NUMBER** to your corresponding account number of the **BUCKET_NAME** parameter!
 
 ```json
 {
@@ -64,6 +62,7 @@ Change **REPLACE_ACCOUNT_NUMBER** to your corresponding account number of the **
     "TRG_PREFIX" : "target/step-transformed"
 }
 ```
+
 ![Glue job state](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-1-6.png)
 
 After a few minutes, we can see that our State Machine completed successfully. Feel free to inspect the different execution tabs or selecting the task to drill down on the task details

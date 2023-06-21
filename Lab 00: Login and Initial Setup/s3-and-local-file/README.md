@@ -1,7 +1,5 @@
 # Prepare S3 Bucket and Clone Files
 
-
-
 We will use [AWS Cloud9](https://aws.amazon.com/cloud9/) to run shell commands, edit and run Python scripts for the labs. Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It combines the rich code editing features of an IDE such as code completion, hinting, and step-through debugging, with access to a full Linux server for running and storing code.
 
 **Prepare Cloud9 Variables, Local Directories, Files & Workshop Configurations**
@@ -16,8 +14,8 @@ We will use [AWS Cloud9](https://aws.amazon.com/cloud9/) to run shell commands, 
 
 **3.** Copy below commands (*always use the tiny **copy icon** on the top-right-corner of the code block!!!*) and paste it in your **Cloud9 Command Line Terminal**:
 
->**Note:** 
->The below commands will automatically download and execute a script called **one-step-setup.sh**. The script name speaks for itself, by run it, all the required pre-steps will be automatically configured for this workshop.
+> **Note:**
+> The below commands will automatically download and execute a script called **one-step-setup.sh**. The script name speaks for itself, by run it, all the required pre-steps will be automatically configured for this workshop.
 
 
 ~~~shell
@@ -31,7 +29,7 @@ $(curl -s ':assetUrl{path="/download/howtostart/awseevnt/s3-and-local-file/one-s
 
 ~~~
 
-> **Note** 
+> **Note**
 > We can verify that our environmental variables have been successfully configured by running the following commands :::
 
 ```bash

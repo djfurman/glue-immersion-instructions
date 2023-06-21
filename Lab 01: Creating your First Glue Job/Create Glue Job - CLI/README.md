@@ -1,13 +1,13 @@
 # Create Glue Job - CLI
 
-> **Alert**
+> **Note**
 > Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) section before starting this lab.
 
 In this section of the lab we will create, execute and verify the results of an AWS Glue job using CLI commands.The job will be ingesting the data from a csv file stored on s3.
 
 **Prepare S3 bucket**
 
-During the workshop environment setup, an Amazon S3 bucket was created for storing lab files and CloudTrail logs. 
+During the workshop environment setup, an Amazon S3 bucket was created for storing lab files and CloudTrail logs.
 
 **Create Glue job source code file**
 
@@ -98,16 +98,16 @@ Now that we have the source code file for the Glue job, follow the instructions 
 
 
 5. After the job is created we can now start it using the `start-job-run` CLI command:
-```bash
-    aws glue start-job-run \
-        --job-name ny-taxi-transformed-cli-jb \
-        --arguments "{ \
-        \"--BUCKET_NAME\" :\"${BUCKET_NAME}\", \
-        \"--SRC_PREFIX\": \"data/raw/step-green\", \
-        \"--TRG_PREFIX\": \"target/glue-transformed\", \
-        \"--JOB_NAME\": \"glue-console-job\" \
-        }"
-```
+    ```bash
+        aws glue start-job-run \
+            --job-name ny-taxi-transformed-cli-jb \
+            --arguments "{ \
+            \"--BUCKET_NAME\" :\"${BUCKET_NAME}\", \
+            \"--SRC_PREFIX\": \"data/raw/step-green\", \
+            \"--TRG_PREFIX\": \"target/glue-transformed\", \
+            \"--JOB_NAME\": \"glue-console-job\" \
+            }"
+    ```
 
 6. To check the status of Glue job run, go to the [AWS Glue console](https://us-east-2.console.aws.amazon.com/glue/), click **Jobs** on the left, select job `ny-taxi-transformed-cli`. In the **Runs** tab, check the **Recent job runs**. Wait for the job to finish with **Run status** as `Succeeded`. 
 
