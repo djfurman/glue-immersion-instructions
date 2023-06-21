@@ -1,6 +1,7 @@
 # Create Glue Job - Console (Optional)
 
-::alert[Please complete the prerequisite [How to start?](/howtostart/awseevnt/s3-and-local-file.html) section before starting this lab.]
+> **Alert** 
+> Please complete the prerequisite [How to start?](/howtostart/awseevnt/s3-and-local-file.html) section before starting this lab.
 
 In this section of the lab we will create, execute and verify the results of an AWS Glue job for ingesting the data from a csv file stored on s3.
 
@@ -14,9 +15,7 @@ Now that we have the source code file for the Glue job, follow the instructions 
 
 **Enable Job Bookmark and run the Glue job**
 
-
 1. Go to the [AWS Glue console](https://us-east-2.console.aws.amazon.com/glue/), click **ETL jobs** on the left, select `Spark script editor` then `Create`.
-
 
 2. Copy the following script to replace the existing one in glue.
 
@@ -80,22 +79,22 @@ Now that we have the source code file for the Glue job, follow the instructions 
 ```
 for the value field add your account number to the following parameter value:
 
-:::alert{header="Important" type="warning"}
-Change **YOUR_ACCOUNT_NUMBER** to your specific account number
-:::
+> **Warning**
+> Change **YOUR_ACCOUNT_NUMBER** to your specific account number
+
 
 ```bash
 glueworkshop-YOUR_ACCOUNT_NUMBER-us-east-2
 ```
 
-7. Repeat step 7 for the following three parameters:
+1. Repeat step 7 for the following three parameters:
 ```bash
 --SRC_PREFIX : data/raw/step-green
 --TRG_PREFIX : target/glue-transformed
 --JOB_NAME   : glue-console-job
 ```
 
-8. Click on `Save` button at the top right corner of the job editor panel to save the changes.
+1. Click on `Save` button at the top right corner of the job editor panel to save the changes.
 
     ::alert[Please inspect your job configuration, it should look similar to this Job]
 
@@ -103,7 +102,7 @@ glueworkshop-YOUR_ACCOUNT_NUMBER-us-east-2
     ![Glue job](/static/Glue%20Jobs/Lab%202/glue-job-screens/gluejob-advance-config.png)
     ![Glue job](/static/Glue%20Jobs/Lab%202/glue-job-screens/gluejob-advance-parameters.png)
 
-9. Click on `Run` and navigate to the **Runs** tab to inspect the latest job execution. Under **Recent job runs**, Wait for the job to finish with **Run status** as `Succeeded`. 
+2. Click on `Run` and navigate to the **Runs** tab to inspect the latest job execution. Under **Recent job runs**, Wait for the job to finish with **Run status** as `Succeeded`. 
 
 
 We have now successfully created and run our first Glue job. The job reads data from a CSV file containing NYC taxi data stored in s3 and loads it to a different path in s3.

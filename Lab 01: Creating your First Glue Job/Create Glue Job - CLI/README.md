@@ -1,6 +1,7 @@
 # Create Glue Job - CLI
 
-::alert[Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) section before starting this lab.]
+> **Alert**
+> Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) section before starting this lab.
 
 In this section of the lab we will create, execute and verify the results of an AWS Glue job using CLI commands.The job will be ingesting the data from a csv file stored on s3.
 

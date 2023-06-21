@@ -10,7 +10,7 @@ In this section of the workshop, we will expand on the already built state machi
 
 To be able to receive notifications from our state machine, we will need to subscribe to the SNS topics already created in your account.
 
-1.	Go to [AWS Simple Notification Service](https://us-east-2.console.aws.amazon.com/sns/). In the navigation pane on the left, click **Topics**, you should see two topics: `glueworkshop-sns-failure-notification` and `glueworkshop-sns-success-notification`
+1. Go to [AWS Simple Notification Service](https://us-east-2.console.aws.amazon.com/sns/). In the navigation pane on the left, click **Topics**, you should see two topics: `glueworkshop-sns-failure-notification` and `glueworkshop-sns-success-notification`
 
 2. It is recommended to subscribe to at least `glueworkshop-sns-success-notification` topic. To do so select the topic, then click **Create subscription**
 
@@ -112,7 +112,6 @@ You should receive an email asking to confirm your subscription to the `gluework
 Notice how the state machine updated the visual representation instantly
 
 ![failed state machine](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-3-1.png)
-
 
 3. Click **Workflow studio** on the right side of the screen.
 

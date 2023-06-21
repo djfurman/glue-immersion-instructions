@@ -1,11 +1,11 @@
 # Create First Step Function
 
-::alert[Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) and [Lab 01: Creating your First Glue Job](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job/README.md) sections before starting this lab.]
+> **alert**
+> Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) and [Lab 01: Creating your First Glue Job](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job/README.md) sections before starting this lab.
 
+In this section of the lab, we will show you how to use the graphic user interface in Step Function to build a workflow to manage the execution of multiple Glue jobs and Glue crawlers.
 
-In this section of the lab, we will show you how to use the graphic user interface in Step Function to build a workflow to manage the execution of multiple Glue jobs and Glue crawlers. 
-
-You are looking to use AWS Step functions when you are looking to build orchestration with multiple AWS Services along with AWS Glue. 
+You are looking to use AWS Step functions when you are looking to build orchestration with multiple AWS Services along with AWS Glue.
 
 **Building Step Function Workflow**
 
@@ -13,7 +13,7 @@ You are looking to use AWS Step functions when you are looking to build orchestr
 
 ![Create state machine](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-1-0.png)
 
-2.	Choose **Design your workflow visually** and choose **Type** as `Standard`.
+2. Choose **Design your workflow visually** and choose **Type** as `Standard`.
 
 ![Define state machine Property](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-1-1.png)
 
@@ -69,6 +69,5 @@ Change **REPLACE_ACCOUNT_NUMBER** to your corresponding account number of the **
 After a few minutes, we can see that our State Machine completed successfully. Feel free to inspect the different execution tabs or selecting the task to drill down on the task details
 
 ![Glue job state](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-1-7.png)
-
 
 You may now proceed to the [Event Driven Orchestration](/Lab%2002%3A%20Orchestration%20using%20Step%20Functions/Event%20Driven%20Orchestration/README.md) section of this lab.
