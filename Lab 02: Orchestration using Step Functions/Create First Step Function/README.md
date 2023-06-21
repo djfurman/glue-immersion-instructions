@@ -9,7 +9,7 @@ You are looking to use AWS Step functions when you are looking to build orchestr
 
 **Building Step Function Workflow**
 
-1.	Go to [AWS Step Function console](https://us-east-2.console.aws.amazon.com/states/). In the navigation pane on the left, click **States Machine**, then click **Create States Machine**.
+1. Go to [AWS Step Function console](https://us-east-2.console.aws.amazon.com/states/). In the navigation pane on the left, click **States Machine**, then click **Create States Machine**.
 
 ![Create state machine](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-1-0.png)
 
@@ -69,3 +69,6 @@ Change **REPLACE_ACCOUNT_NUMBER** to your corresponding account number of the **
 After a few minutes, we can see that our State Machine completed successfully. Feel free to inspect the different execution tabs or selecting the task to drill down on the task details
 
 ![Glue job state](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-1-7.png)
+
+
+You may now proceed to the [Event Driven Orchestration](/Lab%2002%3A%20Orchestration%20using%20Step%20Functions/Event%20Driven%20Orchestration/README.md) section of this lab.

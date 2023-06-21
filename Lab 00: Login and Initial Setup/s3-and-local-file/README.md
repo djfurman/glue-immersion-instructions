@@ -16,7 +16,7 @@ We will use [AWS Cloud9](https://aws.amazon.com/cloud9/) to run shell commands, 
 
 **3.** Copy below commands (*always use the tiny **copy icon** on the top-right-corner of the code block!!!*) and paste it in your **Cloud9 Command Line Terminal**:
 
-::alert[**Note:** The elow commands will automatically download and execute a script called **one-step-setup.sh**. The script name speaks for itself, by run it, all the required pre-steps will be automatically configured for this workshop.]
+::alert[**Note:** The below commands will automatically download and execute a script called **one-step-setup.sh**. The script name speaks for itself, by run it, all the required pre-steps will be automatically configured for this workshop.]
 
 ~~~shell
 cd ~/environment/
@@ -30,14 +30,13 @@ $(curl -s ':assetUrl{path="/download/howtostart/awseevnt/s3-and-local-file/one-s
 ~~~
 
 :::alert{header="Note!" type="success"}
-We can verify that our environmental variables have been successfully configured by running the following commands
+We can verify that our environmental variables have been successfully configured by running the following commands :::
 
 ```bash
 echo ${BUCKET_NAME}
 echo ${AWS_REGION}
 echo ${AWS_ACCOUNT_ID}
 ```
-:::
 
 After setting our environmental variables, we need to create our S3 paths and copy the workshop files we will use during the workshop. Copy and run the following AWS CLI commands into your cloud9 terminal. 
 
@@ -73,4 +72,4 @@ aws cloudformation deploy --template-file  ~/environment/gluemwaatemplate.yaml -
 
 
 
-You are finished setting up the workshop environment and can move on to [Lab 01](/lab1.html) now.
+You are finished setting up the workshop environment and can move on to [Lab 01](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job/README.md) now.

@@ -135,5 +135,6 @@ We can see that our state machine ran successfully and a `Success` email notific
 
 ![failed state machine](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-3-3.png)
 
+This concludes the Lab 2 section of this workshop.
 
-This concludes the Lab 2 section of this workshop. 
+You may now proceed to [Lab 03: Orchestration using MWAA](/Lab%2003%3A%20Orchestration%20using%20MWAA/README.md) section of this workshop.

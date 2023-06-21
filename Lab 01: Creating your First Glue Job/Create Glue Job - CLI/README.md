@@ -1,6 +1,6 @@
 # Create Glue Job - CLI
 
-::alert[Please complete the prerequisite [How to start?](/howtostart/awseevnt/s3-and-local-file.html) section before starting this lab.]
+::alert[Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) section before starting this lab.]
 
 In this section of the lab we will create, execute and verify the results of an AWS Glue job using CLI commands.The job will be ingesting the data from a csv file stored on s3.
 
@@ -113,3 +113,5 @@ Now that we have the source code file for the Glue job, follow the instructions 
     ![Glue job status](/static/Glue%20Jobs/Lab%202/glue-job-screens/SUCCESS.png) 
 
 We have now successfully created and run our first Glue job. The job reads data from a CSV file containing NYC taxi data stored in s3 and loads it to a different path in s3.
+
+You may now proceed to [Lab 02](/Lab%2002%3A%20Orchestration%20using%20Step%20Functions/README.md) of this workshop

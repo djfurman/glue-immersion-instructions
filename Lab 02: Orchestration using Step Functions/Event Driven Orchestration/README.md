@@ -108,3 +108,6 @@ Our Step Function state machine should now run successfully using the parameters
 
 
 ![failed state machine](/static/Glue%20Jobs/Lab%203/step-functions-screenshots/lab8-2-4.png)
+
+
+You may now proceed to the [Step Functions with Notifications](/Lab%2002%3A%20Orchestration%20using%20Step%20Functions/Step%20Functions%20with%20Notifications/README.md) section of this lab.

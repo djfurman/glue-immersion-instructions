@@ -1,7 +1,7 @@
 # View, Execute and Monitor your DAG
 
 
-::alert[Please complete the prerequisite [How to start?](/howtostart/awseevnt/s3-and-local-file.html) and [Lab1](/lab1.html)  section before starting this lab.]
+::alert[Please complete the prerequisite [How to start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/README.md) and [Lab 01: Creating your First Glue Job](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job/README.md) section before starting this lab.]
 
 
 # Adding your first DAG in your MWAA Environment
@@ -89,4 +89,4 @@ aws s3 cp ~/environment/green_tripdata.csv s3://${BUCKET_NAME}/data/raw/mwaa-gre
 ```
 ![failed state machine](/static/Glue%20Jobs/Lab%204/lab4-2-1.png)
 
-This concludes the Lab 3 section of this workshop.
+This concludes Lab 3 section of this workshop.

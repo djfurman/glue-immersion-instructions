@@ -32,4 +32,4 @@ Event engine uses cloudformation template to deploy and build the AWS Resources.
 
 ![Event engine cloudformation](/static/howtostart/awseevnt/cloudformation_arch.png)
 
-**The next step is to prepare your lab [environment](/howtostart/awseevnt/s3-and-local-file.html)**
+**The next step is to prepare [your lab environment](/Lab%2000%3A%20Login%20and%20Initial%20Setup/s3-and-local-file/README.md)**

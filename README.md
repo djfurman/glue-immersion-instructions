@@ -8,12 +8,10 @@ The workshop takes about 3-5 hours to complete end-to-end. After the workshop, y
 The workshop contains the following sections:
 
 
-1. [Lab1 - Environment Setup](/introduction/environmentsetup.html) 
+* [How to Start?](/Lab%2000%3A%20Login%20and%20Initial%20Setup/awseevnt/README.md): Set up an AWS environment for the workshop.
 
-* [How to Start?](/introduction/awseevnt/README.md): Set up an AWS environment for the workshop.
+* [Lab 01](/Lab%2001%3A%20Creating%20your%20First%20Glue%20Job//README.md): Introduction to Apache Spark, and how to use PySpark and Glue-flavored PySpark to develop Glue ETL (extract, transform, load) code and use 3rd party Python libraries in Glue.
 
-* [Lab 01](/lab1/README.md): Introduction to Apache Spark, and how to use PySpark and Glue-flavored PySpark to develop Glue ETL (extract, transform, load) code and use 3rd party Python libraries in Glue.
+* [Lab 02](/Lab%2002%3A%20Orchestration%20using%20Step%20Functions//README.md): Introduction to AWS Step Functions, a low-code visual workflow service used to orchestrate AWS services. You will also learn how to create a simple event driven data processing pipeline.
 
-* [Lab 02](/lab2/README.md): Introduction to AWS Step Functions, a low-code visual workflow service used to orchestrate AWS services. You will also learn how to create a simple event driven data processing pipeline.
-
-* [Lab 03](/lab3/README.md): In this lab, you will learn basics of Apache Airflow by answering a few questions like what is Airflow, why we need Airflow, key concepts and components.
+* [Lab 03](/Lab%2003%3A%20Orchestration%20using%20MWAA//README.md): In this lab, you will learn basics of Apache Airflow by answering a few questions like what is Airflow, why we need Airflow, key concepts and components.
