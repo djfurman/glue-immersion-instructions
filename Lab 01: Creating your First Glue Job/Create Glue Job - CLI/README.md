@@ -30,30 +30,39 @@ During the workshop environment setup, an Amazon S3 bucket was created for stori
     job.init(args['JOB_NAME'], args)
 
     ##constructing the source and target folders
-    src_path = "s3://"+ args['BUCKET_NAME']+"/"+args['SRC_PREFIX'] +"/"
-    trg_path = "s3://"+ args['BUCKET_NAME']+"/"+args['TRG_PREFIX']+"/"
+    src_path = f"s3://{args['BUCKET_NAME']}/{args['SRC_PREFIX']}/"
+    trg_path = f"s3://{args['BUCKET_NAME']}/{args['TRG_PREFIX']}/"
 
-    print ("source file path:", src_path)
+    print(f"source file path: {src_path}")
 
-    ##creating source dataframe from raw table
-
+    # Creating source dataframe from raw table
     srcDyF  = glueContext.create_dynamic_frame.from_options(
-        format_options={"quoteChar": '"', "withHeader": True, "separator": ","},
-        connection_type="s3",
-        format="csv",
         connection_options={
             "paths": [src_path],
             "recurse": True,
         },
-    
+        connection_type="s3",
+        format="csv",
+        format_options={
+            "quoteChar": '"',
+            "withHeader": True,
+            "separator": ","
+        },
     )
+
+    # Check the dataframe
     srcDyF.show(10)
 
     ## Dropping columns with NULL values from the source dynamic frame
     dropnullfields3 = DropNullFields.apply(frame = srcDyF, transformation_ctx = "dropnullfields3")
 
     ##writing to target s3 location
-    datasink4 = glueContext.write_dynamic_frame.from_options(frame = dropnullfields3, connection_type = "s3", connection_options = {"path": trg_path }, format = "parquet")
+    datasink4 = glueContext.write_dynamic_frame.from_options(
+        frame=dropnullfields3,
+        connection_type = "s3",
+        connection_options = {"path": trg_path },
+        format = "parquet"
+    )
 
 
     job.commit()
@@ -65,11 +74,11 @@ During the workshop environment setup, an Amazon S3 bucket was created for stori
 
 **Create the Glue job to load data from the csv file**
 
-Now that we have the source code file for the Glue job, follow the instructions below to create and run a Glue job with this source code file. 
+Now that we have the source code file for the Glue job, follow the instructions below to create and run a Glue job with this source code file.
 
-3. In [AWS Cloud9](https://us-east-2.console.aws.amazon.com/cloud9/), click on the menu bar **Window** and then **New Terminal**. This will open a new terminal window for you. 
+3. In [AWS Cloud9](https://us-east-2.console.aws.amazon.com/cloud9/), click on the menu bar **Window** and then **New Terminal**. This will open a new terminal window for you.
 
-4. In this Cloud9 terminal, run the below commands which will copy your source code file to Amazon S3 and create a Glue ETL job with the source code in S3 bucket. 
+4. In this Cloud9 terminal, run the below commands which will copy your source code file to Amazon S3 and create a Glue ETL job with the source code in S3 bucket.
 
     ```bash
     cd ~/environment
@@ -110,9 +119,9 @@ Now that we have the source code file for the Glue job, follow the instructions 
             }"
     ```
 
-6. To check the status of Glue job run, go to the [AWS Glue console](https://us-east-2.console.aws.amazon.com/glue/), click **Jobs** on the left, select job `ny-taxi-transformed-cli`. In the **Runs** tab, check the **Recent job runs**. Wait for the job to finish with **Run status** as `Succeeded`. 
+6. To check the status of Glue job run, go to the [AWS Glue console](https://us-east-2.console.aws.amazon.com/glue/), click **Jobs** on the left, select job `ny-taxi-transformed-cli`. In the **Runs** tab, check the **Recent job runs**. Wait for the job to finish with **Run status** as `Succeeded`.
 
-    ![Glue job status](/static/Glue%20Jobs/Lab%202/glue-job-screens/SUCCESS.png) 
+    ![Glue job status](/static/Glue%20Jobs/Lab%202/glue-job-screens/SUCCESS.png)
 
 We have now successfully created and run our first Glue job. The job reads data from a CSV file containing NYC taxi data stored in s3 and loads it to a different path in s3.
 
