@@ -47,7 +47,6 @@ aws s3api put-object --bucket ${BUCKET_NAME} --key data/raw/step-green/
 aws s3api put-object --bucket ${BUCKET_NAME} --key trainingday-scripts/
 aws s3api put-object --bucket ${BUCKET_NAME} --key target/
 aws s3api put-object --bucket ${BUCKET_NAME} --key input/lab2/eventdriven/
-aws s3api put-object --bucket mwaa-${AWS_ACCOUNT_ID}-us-east-2 --key dags/
 
 aws sns delete-topic --topic-arn arn:aws:sns:us-east-2:${AWS_ACCOUNT_ID}:lab8-sns-failure-notification
 aws sns delete-topic --topic-arn arn:aws:sns:us-east-2:${AWS_ACCOUNT_ID}:lab8-sns-success-notification
@@ -64,7 +63,6 @@ $(curl -s https://raw.githubusercontent.com/MazenAB/Glue-immersion-day-MWAA/main
 
 aws iam  put-role-policy --role-name AWSEC2ServiceRole-etl-ttt-demo --policy-name FurtherRequiredInlinePolicy --policy-document file://~/environment/FurtherRequiredInlinePolicy.json
 
-aws cloudtrail put-event-selectors --trail-name glueworkshop-trail --event-selectors '[{"ReadWriteType": "WriteOnly","IncludeManagementEvents": false,"DataResources": [{"Type":"AWS::S3::Object","Values": ["arn:aws:s3:::'"$BUCKET_NAME"'/input/lab2/eventdriven/"]}]}]'
 
 $(curl -s https://raw.githubusercontent.com/MazenAB/Glue-immersion-day-MWAA/main/gluemwaatemplate-git.yaml --output ~/environment/gluemwaatemplate.yaml --create-dirs)
 

@@ -13,12 +13,6 @@ In this section, we demonstrate how an S3 event generated when new files are upl
 > Run the following command to update the cloudtrail trail to forward the s3 event to EventBridge
 
 ``` bash
-$(curl -s https://raw.githubusercontent.com/MazenAB/Glue-immersion-day-MWAA/main/FurtherRequiredInlinePolicy.json --output ~/environment/FurtherRequiredInlinePolicy.json --create-dirs)
-
-/bin/sed -i "s/AWS_ACCOUNT_ID/${AWS_ACCOUNT_ID//./_}/g" FurtherRequiredInlinePolicy.json
-
-aws iam  put-role-policy --role-name AWSEC2ServiceRole-etl-ttt-demo --policy-name FurtherRequiredInlinePolicy --policy-document file://~/environment/FurtherRequiredInlinePolicy.json
-
 aws cloudtrail put-event-selectors --trail-name glueworkshop-trail --event-selectors '[{"ReadWriteType": "WriteOnly","IncludeManagementEvents": false,"DataResources": [{"Type":"AWS::S3::Object","Values": ["arn:aws:s3:::'"$BUCKET_NAME"'/input/lab2/eventdriven/"]}]}]'
 ```
 

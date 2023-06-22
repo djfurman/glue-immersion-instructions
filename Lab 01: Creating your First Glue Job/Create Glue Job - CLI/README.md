@@ -93,6 +93,7 @@ Now that we have the source code file for the Glue job, follow the instructions 
         }" \
         --number-of-workers 4 \
         --worker-type Standard
+        
     ```
 
 
